@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D91D8986DE486EBEE7DE2DE /* Pods_chart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33B43F80A02827794141BA2 /* Pods_chart.framework */; };
+		84C51AB61E4EB1210056788F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C51AB51E4EB1210056788F /* Reveal.framework */; };
 		84D50E071E48B83D005D23EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D50E061E48B83D005D23EF /* main.m */; };
 		84D50E0A1E48B83D005D23EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D50E091E48B83D005D23EF /* AppDelegate.m */; };
 		84D50E0D1E48B83D005D23EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D50E0C1E48B83D005D23EF /* ViewController.m */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		05464EC5E9DDB84CE10B35CE /* Pods-chart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chart.release.xcconfig"; path = "Pods/Target Support Files/Pods-chart/Pods-chart.release.xcconfig"; sourceTree = "<group>"; };
+		84C51AB51E4EB1210056788F /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		84D50E021E48B83D005D23EF /* chart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D50E061E48B83D005D23EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84D50E081E48B83D005D23EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D91D8986DE486EBEE7DE2DE /* Pods_chart.framework in Frameworks */,
+				84C51AB61E4EB1210056788F /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +128,7 @@
 		84D50E041E48B83D005D23EF /* chart */ = {
 			isa = PBXGroup;
 			children = (
+				84C51AB51E4EB1210056788F /* Reveal.framework */,
 				84D50E081E48B83D005D23EF /* AppDelegate.h */,
 				84D50E091E48B83D005D23EF /* AppDelegate.m */,
 				84D50E0B1E48B83D005D23EF /* ViewController.h */,
@@ -234,6 +238,7 @@
 				TargetAttributes = {
 					84D50E011E48B83D005D23EF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6LHFUYZBFM;
 					};
 					84D50E1A1E48B83D005D23EF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -491,8 +496,24 @@
 			baseConfigurationReference = 97C3B867235CA3AD55D3A80A /* Pods-chart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6LHFUYZBFM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/chart",
+				);
 				INFOPLIST_FILE = chart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"PNChart\"",
+					"-framework",
+					"\"UICountingLabel\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mapeng.chart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -503,8 +524,24 @@
 			baseConfigurationReference = 05464EC5E9DDB84CE10B35CE /* Pods-chart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6LHFUYZBFM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/chart",
+				);
 				INFOPLIST_FILE = chart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"PNChart\"",
+					"-framework",
+					"\"UICountingLabel\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mapeng.chart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -575,6 +612,7 @@
 				84D50E311E48B83D005D23EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D50E321E48B83D005D23EF /* Build configuration list for PBXNativeTarget "chartTests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +621,7 @@
 				84D50E341E48B83D005D23EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D50E351E48B83D005D23EF /* Build configuration list for PBXNativeTarget "chartUITests" */ = {
 			isa = XCConfigurationList;
@@ -591,6 +630,7 @@
 				84D50E371E48B83D005D23EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

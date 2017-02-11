@@ -23,6 +23,15 @@
     lineChart.showCoordinateAxis = YES;
     lineChart.delegate = self;
     
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(57, 0, 1, 175)];
+    lineView.backgroundColor = [UIColor redColor];
+    [lineChart addSubview:lineView];
+    
+    UIView *lineView1 = [[UIView alloc] initWithFrame:CGRectMake(187, 0, 1, 175)];
+    lineView1.backgroundColor = [UIColor redColor];
+    [lineChart addSubview:lineView1];
+    
     //设置X,Y轴的颜色
     [lineChart setXLabelColor:[UIColor blackColor]];
     [lineChart setYLabelColor:[UIColor blackColor]];
